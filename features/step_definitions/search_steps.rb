@@ -7,9 +7,14 @@ When(/^I fill "(.*?)" in ([^"]*) field$/) do |value, element|
 end
 
 When(/^I click ([^"]*) (button|link)$/) do |element, type_element|
-  home_page.click_search_button
+  home_page.click_on element
 end
 
 Then(/^I should see "(.*?)" label$/) do |value|
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page.find(:xpath, "//span[@class='heading-counter']").text).to eql value
+end
+
+Then(/^I should see (\d+) product's rows$/) do |rows|
+  # home_page.number_of_product
+  page.assert_selector(:xpath, "//ul[@class='product_list row list']//div[@class='row']", :count => rows)
 end

@@ -54,6 +54,19 @@ GEM
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     regexp_parser (1.6.0)
+    rspec (3.9.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+    rspec-core (3.9.2)
+      rspec-support (~> 3.9.3)
+    rspec-expectations (3.9.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-support (3.9.3)
     rubyzip (1.2.2)
     selenium-webdriver (3.142.3)
       childprocess (>= 0.5, < 2.0)
@@ -74,6 +87,7 @@ DEPENDENCIES
   capybara
   cucumber
   poltergeist (~> 1.18, >= 1.18.1)
+  rspec (~> 3.9)
   selenium-webdriver
   test-unit (~> 3.3, >= 3.3.6)
 

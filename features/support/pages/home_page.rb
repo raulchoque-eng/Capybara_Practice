@@ -10,8 +10,13 @@ class HomePage
     page.fill_in 'search_query_top', with: value
   end
 
-  def click_search_button
-    page.click_button('Search')
+  def click_on(value)
+    page.click_on value
+  end
+
+  def number_of_product
+    product_in_list = page.all(:xpath, "//ul[@class='product_list row list']//div[@class='row']")
+    print product_in_list.lenght
   end
 end
 
